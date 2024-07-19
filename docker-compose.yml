@@ -1,0 +1,42 @@
+version: "3.8"
+
+services:
+  mybackend_db:
+    container_name: mybackend_db
+    image: mysql:8.0.28
+    restart: unless-stopped
+    platform: linux/amd64
+    env_file: ./.env
+    environment:
+      - MYSQL_ROOT_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+      - MYSQL_DATABASE=$MYSQLDB_DATABASE
+    ports:
+      - $MYSQLDB_LOCAL_PORT:$MYSQLDB_DOCKER_PORT
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 10s
+      retries: 10
+
+  mybackend_app:
+    container_name: mybackend_app
+    depends_on:
+      mybackend_db:
+        condition: service_healthy
+    build: ./SbModule
+    restart: on-failure
+    env_file: ./.env
+    ports:
+      - $SPRING_LOCAL_PORT:$SPRING_DOCKER_PORT
+    environment:
+      SPRING_APPLICATION_JSON: '{
+        "spring.datasource.url"  : "jdbc:mysql://mybackend_db:$MYSQLDB_DOCKER_PORT/$MYSQLDB_DATABASE?useSSL=false",
+        "spring.datasource.username" : "$MYSQLDB_USER",
+        "spring.datasource.password" : "$MYSQLDB_ROOT_PASSWORD",
+        "spring.jpa.properties.hibernate.dialect" : "org.hibernate.dialect.MySQL8Dialect",
+        "spring.jpa.hibernate.ddl-auto" : "update"
+      }'
+    volumes:
+      - .m2:/root/.m2  # Keep this if you want to cache Maven dependencies
+    stdin_open: true
+    tty: true
