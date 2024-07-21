@@ -5,13 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26e3bb8d-f0cf-4b86-9625-900b2001824d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SbModule/SbModule/src/main/java/com/dev/sbmodule/entity/BasicEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SbModule/SbModule/src/main/java/com/dev/sbmodule/entity/Information.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SbModule/SbModule/src/main/java/com/dev/sbmodule/config/DocConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SbModule/SbModule/src/main/java/com/dev/sbmodule/config/WebSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SbModule/SbModule/src/main/java/com/dev/sbmodule/constant/PublicPath.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SbModule/SbModule/src/main/java/com/dev/sbmodule/controller/SwaggerDocsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SbModule/SbModule/src/main/resources/static/swagger-ui.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SbModule/SbModule/src/main/resources/swagger.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.m2/copy_reference_file.log" beforeDir="false" afterPath="$PROJECT_DIR$/.m2/copy_reference_file.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SbModule/SbModule/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/SbModule/SbModule/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SbModule/src/main/java/com/dev/sbmodule/constant/PublicPath.java" beforeDir="false" afterPath="$PROJECT_DIR$/SbModule/src/main/java/com/dev/sbmodule/constant/PublicPath.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,12 +24,13 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Dockerfile" />
+        <option value="Swagger" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/SbModule" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -52,9 +55,9 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "<unknown>",
     "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "/Users/bangvoanh/Documents/directories/SbMyBackend",
+    "last_opened_file_path": "/Users/bangvoanh/Documents/directories/SbMyBackend/SbModule/src/main/resources/static",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -65,6 +68,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/SbModule/src/main/resources/static" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -86,7 +90,7 @@
       <option name="presentableId" value="Default" />
       <updated>1721420151343</updated>
       <workItem from="1721420153397" duration="3046000" />
-      <workItem from="1721423450081" duration="9671000" />
+      <workItem from="1721423450081" duration="14708000" />
     </task>
     <servers />
   </component>
